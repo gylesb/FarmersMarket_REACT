@@ -9,14 +9,14 @@ function Schedule(props) {
       <h3>{props.hours}</h3>
       <h3><em>{props.booth}</em></h3>
     </div>
-  )
+  );
 }
 
-Schedule.PropTypes = {
-  day: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  hours: PropTypes.string.isRequired,
-  booth: PropTypes.string.isRequired
+Schedule.propTypes = {
+  day: PropTypes.string,
+  location: PropTypes.string,
+  hours: PropTypes.string,
+  booth: PropTypes.string
 };
 
 export default Schedule;

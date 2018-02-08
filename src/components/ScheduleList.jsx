@@ -1,3 +1,6 @@
+import React from "react";
+import Schedule from './Schedule';
+
 const marketSchedule = [
   {
     day: 'Sunday',
