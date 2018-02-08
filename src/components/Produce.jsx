@@ -5,14 +5,19 @@ function Produce(props) {
   return (
     <div>
       <h3><em>{props.month}</em></h3>
-      <h3>{props.selection}</h3>
+
+      <ul>
+        {props.selection.map((produce, index) =>
+        <li>{produce}</li>
+        )}
+      </ul>
     </div>
   );
 }
 
 Produce.propTypes = {
-  month: PropTypes.string.isRequired,
-  selection: PropTypes.string.isRequired
+  month: PropTypes.string,
+  selection: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Produce;

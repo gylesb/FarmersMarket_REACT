@@ -271,14 +271,21 @@ const availableProduce = [
 ];
 
 function ProduceList() {
+  var produceListStyles = {
+    backgroundColor: '#33C4FF',
+    fontFamily: 'Trebuchet MS',
+    padding: '20px'
+  };
   return (
-    <div>
-      <div>
-        {availableProduce.map((produce, index) =>
-          <Produce month = {produce.month}
-            selection = {produce.selection}
-            key={index} />
-        )}
+    <div styles={produceListStyles}>
+      <div className = "row">
+        <div className = "col-md-3">
+          {availableProduce.map((produce, index) =>
+            <Produce month = {produce.month}
+              selection = {produce.selection}
+              key={index} />
+          )}
+        </div>
       </div>
     </div>
   );

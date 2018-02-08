@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Schedule from './Schedule';
 
 const marketSchedule = [
@@ -40,19 +40,24 @@ const marketSchedule = [
   }
 ];
 
-function Schedule() {
+function ScheduleList() {
+  // var scheduleStyles = {
+  //   backgroundColor: '#33C4FF',
+  //   font-family = 'Trebuchet MS',
+  //   padding = '20px'
+  // }
   return (
     <div>
       <hr />
-      {marketSchedule.map((schedule, index) =>
-        <Schedule day = {schedule.day}
-          location = {schedule.location}
-          hours = {schedule.hours}
-          booth = {schedule.booth}
+      {marketSchedule.map((masterSchedule, index) =>
+        <Schedule day = {masterSchedule.day}
+          location = {masterSchedule.location}
+          hours = {masterSchedule.hours}
+          booth = {masterSchedule.booth}
           key = {index} />
       )}
     </div>
-  )
+  );
 }
 
 export default ScheduleList;
